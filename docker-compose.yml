@@ -1,0 +1,11 @@
+version: "3.8"
+
+services:
+  my-app:
+    image: project:latest # Replace with your actual image
+    deploy:
+      replicas: 2 # Number of replicas
+      restart_policy:
+        condition: on-failure
+    ports:
+      - "80:80"
